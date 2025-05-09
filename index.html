@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Banner Display Ad Demo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Banner Display Ad Demo</h1>
+    <p>This page demonstrates how I translated Photoshop designs into dynamic, responsive HTML/JavaScript banners. It features a Jet2 campaign and carousel examples from 6 additional brands I've built.</p>
+  </header>
+
+  <!-- Jet2 Demo Section -->
+  <section class="jet2-section">
+    <h2>Jet2 Banner Display Ad</h2>
+    <div class="jet2-media">
+      <div class="media-item">
+        <img src="assets/jet2vibepsd.png" alt="Jet2 Photoshop Design" />
+        <div class="caption">Original Photoshop Design</div>
+      </div>
+      <div class="media-item">
+        <img src="assets/jet2code.png" alt="Jet2 Code Example" />
+        <div class="caption">JavaScript/GSAP Code Snippet</div>
+      </div>
+      <div class="media-item">
+        <video src="assets/jet2vibe.mp4" controls muted autoplay poster="assets/jet2-thumb.jpg"></video>
+        <div class="caption">MPU Ad Banner</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Carousel Section -->
+  <section class="carousel-wrapper">
+    <h2>Additional Display Ad Banners</h2>
+    <div class="carousel-container">
+      <div class="carousel" id="carousel">
+        <div class="carousel-item">
+          <video src="assets/audible.mp4" controls muted poster="assets/audible.png"></video>
+          <div class="caption">Audible</div>
+        </div>
+        <div class="carousel-item">
+          <video src="assets/eurostar.mp4" controls muted poster="assets/eurostar.png"></video>
+          <div class="caption">Eurostar</div>
+        </div>
+        <div class="carousel-item">
+          <video src="assets/jameson.mp4" controls muted poster="assets/jameson.png"></video>
+          <div class="caption">Jameson</div>
+        </div>
+        <div class="carousel-item">
+          <video src="assets/legoland.mp4" controls muted poster="assets/legoland.png"></video>
+          <div class="caption">Legoland</div>
+        </div>
+        <div class="carousel-item">
+          <video src="assets/nationwide.mp4" controls muted poster="assets/nationwide.png"></video>
+          <div class="caption">Nationwide</div>
+        </div>
+        <div class="carousel-item">
+          <video src="assets/raf.mp4" controls muted poster="assets/raf.png"></video>
+          <div class="caption">Royal Air Force</div>
+        </div>
+      </div>
+      <div class="carousel-buttons">
+        <button id="prevBtn">&#8592;</button>
+        <button id="nextBtn">&#8594;</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const carousel = document.getElementById('carousel');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+
+    nextBtn.addEventListener('click', () => {
+      carousel.scrollBy({ left: 320, behavior: 'smooth' });
+    });
+
+    prevBtn.addEventListener('click', () => {
+      carousel.scrollBy({ left: -320, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
